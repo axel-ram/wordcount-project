@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>COUNT</h1>
+    <br>
+    <h3><a href="{% url 'home' %}">Start Again</a></h3>
+    <h3><a href="{% url 'about' %}">About</a></h3>
+    <br>
+    <h4>The recieved Text : {{ recievedText }}</h4>
+    <h4>Word count : {{ wordscount }}</h4>
+    <h4>Word frequency</h4>
+    {% for word, counttotal in sortedDictionary %}
+      {{ word }} : {{ counttotal }}
+      <br>
+    {% endfor %}
+  </body>
+</html>
